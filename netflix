@@ -1,0 +1,67 @@
+{
+ "metadata": {
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.2-final"
+  },
+  "orig_nbformat": 2,
+  "kernelspec": {
+   "name": "python_defaultSpec_1599666158109",
+   "display_name": "Python 3.8.2 64-bit"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2,
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": "welcome to netflix nithesh\nhello nithesh\nyour age is admitted to see money heist\nyour phone number is: 807232222\nwe have sent an OTP to your number\nverified your otp\n"
+    }
+   ],
+   "source": [
+    "name = input(\"your name:\")\n",
+    "print(\"welcome to netflix\",name)\n",
+    "print('hello',name)\n",
+    "age = int(input(\"your age:\"))\n",
+    "if age>=18:\n",
+    "    print(\"your age is admitted to see money heist\")\n",
+    "else:\n",
+    "    print(\" WARNING: you are not able to see money heist,only 18 year old can see money heist\") \n",
+    "  \n",
+    "\n",
+    "phone_num =int(input(\"enter your phone number:\"))\n",
+    "print(\"your phone number is:\",phone_num)\n",
+    "print(\"we have sent an OTP to your number\")\n",
+    "OTP = int(input(\"enter your OTP:\"))\n",
+    "if OTP==7477:\n",
+    "    print('verified your otp',)\n",
+    "else:\n",
+    "    print(\"enter valid otp\")\n",
+    "    \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ]
+}
