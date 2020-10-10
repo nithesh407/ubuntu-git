@@ -1,0 +1,29 @@
+{%if course.pk is 1%}
+<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcamo.githubusercontent.com%2F91de473fa3f2f749a56effc3e64f1049d108251f%2F68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f632f63332f507974686f6e2d6c6f676f2d6e6f746578742e7376672f37363870782d507974686f6e2d6c6f676f2d6e6f746578742e7376672e706e67&imgrefurl=https%3A%2F%2Fgithub.com%2Fpython%2Fcpython&tbnid=rbJkZvEjtpmPbM&vet=12ahUKEwiW1c2Y7I3sAhUHVCsKHT2JDuAQMygBegUIARDOAQ..i&docid=c0z0eoeQftV_cM&w=768&h=768&q=python&ved=2ahUKEwiW1c2Y7I3sAhUHVCsKHT2JDuAQMygBegUIARDOAQ
+">
+
+<h1><a href="https://www.udemy.com/course/python-for-every1/">{{course.coursename}}</a></h1>
+<h2>{{course.insname}}</h2>
+<h3> click the Programming language</h3>
+<ul>
+    {% for x in AllCourses.set.all %}
+    <li>{{ x.ct }}</li>
+    {% endfor %}
+</ul>
+{%else%}
+<h3><a href="https://www.udemy.com/course/java-programming-tutorial-for-beginners/">{{course.coursename}}</a></h3>
+<h4>{{course.insname}}</h4>
+{%endif%}
+
+{% if error_message %} <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% url 'Calc:yourchoice' course.id %}"
+      method="post">
+    {% csrf_token %}
+    {% for choice in course.details_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value=" { choice_id }">
+    <label for="choice{{ forloop.counter }}">{{ choice.ct }}</label><br>
+    {% endfor %}
+    <input type="submit" value="submit">
+</form>
